@@ -1,0 +1,28 @@
+{
+  "name": "yohannpicot_3_28052021",
+  "version": "1.0.0",
+  "description": "Projet 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/main.scss:/sass/main.css
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/picyoh/YohannPicot_3_28052021.git"
+  },
+  "author": "picyoh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/picyoh/YohannPicot_3_28052021/issues"
+  },
+  "homepage": "https://github.com/picyoh/YohannPicot_3_28052021#readme",
+  "dependencies": {
+    "nvm": "^0.0.4"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "Projet",
+    "3"
+  ]
+}

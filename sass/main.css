@@ -33,13 +33,13 @@
 @-webkit-keyframes midLoadingSpin {
   0% {
     width: 16%;
-    height: 16vh;
-    margin: 10% 0 0 33%;
+    height: 12vh;
+    margin: 50% 0 0 42%;
   }
   100% {
     width: 16%;
-    height: 16vh;
-    margin: 10% 0 0 33%;
+    height: 12vh;
+    margin: 50% 0 0 42%;
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
     border: 0 none;
@@ -49,13 +49,13 @@
 @keyframes midLoadingSpin {
   0% {
     width: 16%;
-    height: 16vh;
-    margin: 10% 0 0 33%;
+    height: 12vh;
+    margin: 50% 0 0 42%;
   }
   100% {
     width: 16%;
-    height: 16vh;
-    margin: 10% 0 0 33%;
+    height: 12vh;
+    margin: 50% 0 0 42%;
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
     border: 0 none;
@@ -197,85 +197,61 @@
 .menu__course:nth-child(0) {
   -webkit-animation-duration: 0s;
           animation-duration: 0s;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
 }
 
 .menu__course:nth-child(1) {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
 }
 
 .menu__course:nth-child(2) {
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
 }
 
 .menu__course:nth-child(3) {
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
 }
 
 .menu__course:nth-child(4) {
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
 }
 
 .menu__course:nth-child(5) {
   -webkit-animation-duration: 5s;
           animation-duration: 5s;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
 }
 
 .menu__course:nth-child(6) {
   -webkit-animation-duration: 6s;
           animation-duration: 6s;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
 }
 
 .menu__course:nth-child(7) {
   -webkit-animation-duration: 7s;
           animation-duration: 7s;
-  -webkit-animation-delay: 3.5s;
-          animation-delay: 3.5s;
 }
 
 .menu__course:nth-child(8) {
   -webkit-animation-duration: 8s;
           animation-duration: 8s;
-  -webkit-animation-delay: 4s;
-          animation-delay: 4s;
 }
 
 .menu__course:nth-child(9) {
   -webkit-animation-duration: 9s;
           animation-duration: 9s;
-  -webkit-animation-delay: 4.5s;
-          animation-delay: 4.5s;
 }
 
 .menu__course:nth-child(10) {
   -webkit-animation-duration: 10s;
           animation-duration: 10s;
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
 }
 
 .menu__course:nth-child(11) {
   -webkit-animation-duration: 11s;
           animation-duration: 11s;
-  -webkit-animation-delay: 5.5s;
-          animation-delay: 5.5s;
 }
 
 body {
@@ -340,18 +316,18 @@ h4 {
   height: 80%;
   z-index: 1;
   border: 0 none;
-  -webkit-animation: loadingHide 2s linear;
-          animation: loadingHide 2s linear;
+  -webkit-animation: loadingHide 2s ease-in-out;
+          animation: loadingHide 2s ease-in-out;
 }
 
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 480px) {
   .loadingSpinner {
     -webkit-animation: loadingSpin 2s linear;
             animation: loadingSpin 2s linear;
   }
 }
 
-@media screen and (min-width: (max-width: 1280px)) {
+@media screen and (min-width: 481px) {
   .loadingSpinner {
     -webkit-animation: midLoadingSpin 2s linear;
             animation: midLoadingSpin 2s linear;
@@ -426,9 +402,15 @@ h1 {
   border-left: none;
 }
 
+@media screen and (min-width: 481px) {
+  .searchField {
+    height: 5vh;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .searchField {
-    height: 4vh;
+    height: 3vh;
   }
 }
 
@@ -474,9 +456,16 @@ h1 {
           box-shadow: 0 5px 12px silver;
 }
 
-@media screen and (min-width: (max-width: 1280px)) {
+@media screen and (min-width: 481px) {
+  .explore h2 {
+    padding: 3% 0;
+  }
+  .explore p {
+    padding-bottom: 7%;
+  }
   .explore .btn {
-    border-radius: 2% / 15%;
+    border-radius: 4% / 50%;
+    margin-bottom: 7%;
   }
 }
 
@@ -548,6 +537,23 @@ h1 {
   left: 18%;
 }
 
+@media screen and (min-width: 481px) {
+  .hiw {
+    margin: 5%;
+  }
+  .hiw ol li {
+    position: relative;
+    padding: 3% 0;
+    margin-bottom: 4%;
+    border-radius: 4% / 50%;
+  }
+  .hiw ol li:before {
+    padding: .5em .75em;
+    top: 24%;
+    left: 2%;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .hiw {
     margin: 0 5%;
@@ -604,8 +610,8 @@ h1 {
 }
 
 .restaurants .resto-card__img img {
-  min-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5% / 7.5%;
@@ -675,14 +681,14 @@ h1 {
   padding-right: 15%;
 }
 
-@media screen and (min-width: (max-width: 1280px)) {
+@media screen and (min-width: 481px) {
   .restaurants {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 5% 20% 3% 20% 3% 20% 3% 20% 5%;
-        grid-template-columns: 5% 20% 3% 20% 3% 20% 3% 20% 5%;
-    -ms-grid-rows: 5% 1fr;
-        grid-template-rows: 5% 1fr;
+    -ms-grid-columns: 3% 45% 5% 45% 2%;
+        grid-template-columns: 3% 45% 5% 45% 2%;
+    -ms-grid-rows: 5% 1fr 1fr;
+        grid-template-rows: 5% 1fr 1fr;
     padding: 0 0 2% 0;
     margin: 0;
   }
@@ -731,6 +737,9 @@ h1 {
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3 / span 1;
+  }
+  .restaurants .resto-card .nouveau {
+    height: 14%;
   }
   .restaurants .resto-card .nouveau p {
     margin: 10%;
@@ -850,6 +859,8 @@ h1 {
 
 .menu section {
   padding: 1% 0;
+  -webkit-animation: 1s ease 0s emerge;
+          animation: 1s ease 0s emerge;
 }
 
 .menu h3 {
@@ -862,8 +873,6 @@ h1 {
   background-position: 0 100%;
   background-repeat: no-repeat;
   background-size: 15% 10%;
-  -webkit-animation: 5s ease 0s emerge;
-          animation: 5s ease 0s emerge;
 }
 
 .menu__course {
@@ -883,8 +892,8 @@ h1 {
   transition-property: grid-template-columns, -webkit-transform;
   transition-property: grid-template-columns, transform;
   transition-property: grid-template-columns, transform, -ms-grid-columns, -webkit-transform;
-  -webkit-animation: 3s ease 0s emerge;
-          animation: 3s ease 0s emerge;
+  -webkit-animation: 3s ease  emerge;
+          animation: 3s ease  emerge;
 }
 
 .menu__course h4 {
@@ -959,8 +968,8 @@ h1 {
 }
 
 .menu__course:hover .spinTwice {
-  -webkit-animation: fa-spin 0.5s 1 linear;
-          animation: fa-spin 0.5s 1 linear;
+  -webkit-animation: fa-spin 0.5s 0.1s linear 1;
+          animation: fa-spin 0.5s 0.1s linear 1;
 }
 
 .menu button {
@@ -988,13 +997,34 @@ h1 {
           box-shadow: 0 5px 12px silver;
 }
 
+@media screen and (min-width: 481px) {
+  .menu section h3 {
+    padding-bottom: 1.5%;
+  }
+  .menu section .menu__course {
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+  .menu section .menu__course h4 {
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+  .menu section .menu__course:hover {
+    -ms-grid-columns: 5% 60% 15% 3% 20%;
+        grid-template-columns: 5% 60% 15% 3% 20%;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .menu {
     border-radius: 5%;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+    padding: 3%;
   }
   .menu section {
+    padding: 0;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[3];
@@ -1003,12 +1033,23 @@ h1 {
         grid-template-rows: 10% 90%;
   }
   .menu section h3 {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / span 1;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / span 1;
   }
   .menu section .menu__course {
     width: 90%;
+    margin: 0;
+  }
+  .menu section .menu__course h4 {
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+    font-size: 1.2em;
+    padding-bottom: 1%;
   }
   .menu section .menu__course:nth-child(2) {
     -ms-grid-column: 1;
@@ -1034,10 +1075,20 @@ h1 {
     -ms-grid-row-span: 1;
     grid-row: 2 / span 1;
   }
+  .menu section .menu__course p {
+    font-size: 1em;
+  }
+  .menu section .menu__course p:nth-of-type(2) {
+    font-size: 1em;
+  }
+  .menu section .menu__course:hover {
+    -ms-grid-columns: 5% 60% 15% 2% 20%;
+        grid-template-columns: 5% 60% 15% 2% 20%;
+  }
   .menu button {
     width: 30%;
     border-radius: 5% / 50%;
-    margin: 3% auto;
+    margin: 2% auto;
   }
 }
 
@@ -1067,6 +1118,24 @@ footer ul li {
 footer ul li i {
   width: 1em;
   padding-right: 5%;
+}
+
+@media screen and (min-width: 481px) {
+  footer {
+    padding: 3% 0;
+  }
+  footer .logo img {
+    display: block;
+    margin: 0 auto 0 auto;
+    width: 20%;
+    padding: 0;
+  }
+  footer ul li {
+    text-align: center;
+    display: inline-block;
+    padding: 2% 4% 0 4%;
+    white-space: nowrap;
+  }
 }
 
 @media screen and (min-width: 1280px) {

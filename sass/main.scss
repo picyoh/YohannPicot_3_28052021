@@ -20,13 +20,13 @@ $breakpoints: (
 
 
 @mixin mobile-only {
-    @media screen and (max-width: map-get($breakpoints, tablette)){
+    @media screen and (max-width: map-get($breakpoints, mobile-only)){
         @content;
     }
 }
 
 @mixin mobile-tablette {
-    @media screen and (min-width: map-get($breakpoints, tablette) and (max-width: map-get($breakpoints, desktop))){
+    @media screen and (min-width: map-get($breakpoints, tablette)){
         @content;
     }
 }
@@ -46,8 +46,8 @@ $breakpoints: (
 
 @mixin mid-loader{
     width: 16%;
-    height: 16vh;
-    margin: 10% 0 0 33%;
+    height: 12vh;
+    margin: 50% 0 0 42%;
 }
 
 @mixin desktop-loader{
@@ -96,7 +96,7 @@ $breakpoints: (
 
 @mixin tablette-bottom-grid{
     display: grid;
-    grid-template-columns: 3% 45% 3% 45% 3%;
+    grid-template-columns: 3% 45% 5% 45% 2%;
     grid-template-rows: 5% 1fr 1fr;
 }
 
@@ -201,7 +201,6 @@ $breakpoints: (
     .menu__course{
         &:nth-child(#{$i}) {
             animation-duration: $i * 1s;
-            animation-delay: $i * 0.5s;
         }
     }
 }
@@ -325,8 +324,12 @@ h1 {
     border-bottom: none;
     border-left: none;
 
+    @include mobile-tablette{
+        height: 5vh;
+    }
+
     @include desktops{
-        height: 4vh;
+        height: 3vh;
     }
 }
 
@@ -354,8 +357,18 @@ h1 {
     }
 
     @include mobile-tablette{
+        
+        h2 {
+            padding: 3% 0;
+        }
+
+        p {
+            padding-bottom: 7%;
+        }
+
         .btn{
-            border-radius: 2% / 15%;
+            border-radius: 4% / 50%;
+            margin-bottom: 7%;
         }
     }
 
@@ -426,13 +439,29 @@ h1 {
         }
     }
 
+    @include mobile-tablette{
+        margin: 5%;
+        ol{
+            li {
+                position: relative;
+                padding: 3% 0;
+                margin-bottom: 4%;
+                border-radius: 4% / 50%;
+                &:before{
+                    padding: .5em .75em;
+                    top: 24%;
+                    left: 2%;
+                }
+            }
+        }
+    }
+
     @include desktops{
         margin: 0 5%;
         grid-column: 3 / span 1;
         grid-row: 2 / span 4;
         
         ol{
-            
             li{
                 position: relative;
                 padding: 2.5% 0;
@@ -470,8 +499,8 @@ h1 {
             grid-row: 1 / span 2;
     
             img {
-                min-width: 100%;
-                max-height: 100%;
+                width: 100%;
+                height: 100%;
                 object-fit: cover;
                 border-radius: 5% / 7.5%;
                 border-bottom-left-radius: 0;
@@ -523,7 +552,7 @@ h1 {
     }
     
     @include mobile-tablette{
-        @include bottom-grid;
+        @include tablette-bottom-grid;
         padding: 0 0 2% 0;
         margin: 0;
         
@@ -560,6 +589,7 @@ h1 {
             }
 
             .nouveau{
+                height: 14%;
                 p {
                     margin: 10%;
                 }
@@ -665,6 +695,7 @@ h1 {
     
     section {
         padding: 1% 0;
+        animation: 1s ease 0s emerge;
     }
 
     h3 {
@@ -676,8 +707,6 @@ h1 {
         background-position: 0 100%;
         background-repeat: no-repeat;
         background-size: 15% 10%;
-        animation: 5s ease 0s emerge;
-
     }
 
     &__course {
@@ -690,7 +719,7 @@ h1 {
         grid-template-rows: 0.8em auto 0.5em auto 0.8em;
         transition: 0.5s ease-in-out;
         transition-property: grid-template-columns, transform;
-        animation: 3s ease 0s emerge;
+        animation: 3s ease  emerge;
 
         h4 {
             margin: 0;
@@ -742,36 +771,64 @@ h1 {
             }
 
             .spinTwice{
-                animation: fa-spin 0.5s 1 linear;
+                animation: fa-spin 0.5s 0.1s linear 1;
             }
         }
     }
 
-    button {
+    button{
         @include btn-style;
         @include centered-block;
         width: 52%;
         border-radius: 15% / 50%;
         margin: 15% auto;
     }
+    
+    @include mobile-tablette{
+        section{
+            h3{
+                padding-bottom: 1.5%;
+            }
+            .menu__course{
+                grid-template-rows: auto;
+                h4{
+                    align-self: end;
+                }
+                &:hover{
+                    grid-template-columns: 5% 60% 15% 3% 20%;
+                }
+            }
+        }
+    }
 
     @include desktops{
         border-radius: 5%;
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
+        padding: 3%;
+
         section{
+            padding: 0;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 10% 90%;
 
             h3{
+                grid-column: 2 / span 1;
                 grid-row: 1 / span 1;
             }
 
             .menu__course{
 
                 width: 90%;
-                
+                margin: 0;
+
+                h4{
+                    align-self: end;
+                    font-size: 1.2em;
+                    padding-bottom: 1%;
+                }
+
                 &:nth-child(2) {
                     grid-column: 1 / span 1;
                     grid-row: 2 / span 1;
@@ -786,13 +843,25 @@ h1 {
                     grid-column: 3 / span 1;
                     grid-row: 2 / span 1;
                 }
+
+                p{
+                    font-size: 1em;
+                }
+
+                p:nth-of-type(2){
+                    font-size: 1em;
+                }
+
+                &:hover{
+                    grid-template-columns: 5% 60% 15% 2% 20%;
+                }
             }
         }
 
         button {
             width: 30%;
             border-radius: 5% / 50%;
-            margin: 3% auto;
+            margin: 2% auto;
         }
     }
 }
@@ -824,6 +893,29 @@ footer {
                 padding-right: 5%;
             }
         }
+    }
+
+    @include mobile-tablette{
+        padding: 3% 0;
+        
+        .logo{
+            
+            img {
+                @include centered-block;
+                width: 20%;
+                padding: 0;
+            }
+        }
+
+        ul{
+            li{
+                text-align: center;
+                display: inline-block;
+                padding: 2% 4% 0 4%;
+                white-space: nowrap;
+            }
+        }
+
     }
 
     @include desktops {
