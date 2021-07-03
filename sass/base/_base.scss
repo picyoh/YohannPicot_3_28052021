@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    max-width: 100%;
+    min-height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+h3 {
+    font-size: 1.5em;
+}
+
+h4 {
+    font-weight: $bold-font;
+}
+
+::placeholder{
+    opacity: 0.8;
+}

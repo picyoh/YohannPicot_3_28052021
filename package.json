@@ -4,8 +4,8 @@
   "description": "Projet 3",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch ./sass/main.scss:/sass/main.css
+    "sass": "sass --watch ./sass/main.scss:/sass/main.css",
+    "prefix": "postcss ./sass/main.css --use autoprefixer -d ./sass/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -13,6 +13,7 @@
   },
   "author": "picyoh",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/picyoh/YohannPicot_3_28052021/issues"
   },

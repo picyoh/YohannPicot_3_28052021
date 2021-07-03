@@ -1,0 +1,17 @@
+// header
+h1 {
+    display: none;
+}
+
+.logo {
+    img {
+        width: 50%;
+        padding: 6% 0 3% 0;
+        @include centered-block;
+
+        @include desktops{
+            width: 10%;
+            padding: 2% 0;
+        }
+    }
+}

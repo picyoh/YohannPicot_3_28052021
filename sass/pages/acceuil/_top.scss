@@ -1,0 +1,81 @@
+// page
+.wrapper {
+
+    animation: wrapperVisibility 2.5s ease-in-out;
+}
+
+// haut de page
+
+.top{
+    @include desktops{
+        @include top-grid;
+    }
+
+    form{
+        @include desktops{
+            grid-column: 1/ span 4;
+            grid-row: 1 /span 1;
+        }
+    }
+}
+
+.explore {
+    text-align: center;
+    background: whitesmoke;
+    
+    h2 {
+        width: 70%;
+        padding: 10% 0 3% 0;
+        @include centered-block;
+    }
+
+    p {
+        width: 80%;
+        font-weight: $light-font;
+        padding-bottom: 10%;
+        @include centered-block;
+    }
+
+    .btn{
+        @include btn-style;
+        width: 60%;
+        margin-bottom: 15%;
+    }
+
+    @include mobile-tablette{
+        
+        h2 {
+            padding: 3% 0;
+        }
+
+        p {
+            padding-bottom: 7%;
+        }
+
+        .btn{
+            border-radius: 4% / 50%;
+            margin-bottom: 7%;
+        }
+    }
+
+    @include desktops{
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 2;
+        margin: 3% 0;
+        border-radius: 5% / 15%;
+
+        h2 {
+            padding: 5% 0;
+        }
+
+        p {
+            padding-bottom: 5%;
+        }
+
+        .btn{
+            border-radius: 5% / 50%;
+            margin-bottom: 5%;
+        }
+        
+    }
+}

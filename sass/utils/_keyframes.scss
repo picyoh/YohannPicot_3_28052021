@@ -1,0 +1,97 @@
+// animations
+
+@keyframes loadingSpin {
+    0%{
+        @include loader;
+    }
+
+    100%{
+        @include loader;
+        transform: rotate(360deg);
+        border: 0 none;
+    }
+}
+
+@keyframes midLoadingSpin {
+    0%{
+        @include mid-loader;
+    }
+
+    100%{
+        @include mid-loader;
+        transform: rotate(360deg);
+        border: 0 none;
+    }
+}
+
+@keyframes desktopLoadingSpin {
+    0%{
+        @include desktop-loader;
+    }
+
+    100%{
+        @include desktop-loader;
+        transform: rotate(360deg);
+        border: 0 none;
+    }
+}
+
+@keyframes loadingHide {
+    0%{
+        border: 12px solid transparent;
+        border-top-color: $primaire;
+    }
+
+    99%{
+        border: 12px solid transparent;
+        border-top-color: $primaire;
+    }
+
+    100%{
+        border: 0 none;
+    }
+}
+
+@keyframes wrapperVisibility {
+    0%{
+        @include null-size;
+        display: none;
+        opacity: 0;
+    }
+
+    50% {
+        @include null-size;
+        transform: translateY(100%);
+    }
+
+    70%{
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);    
+        opacity: 1;
+    }
+}
+
+@keyframes emerge {
+    0%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@for $i from 0 to 12 {
+
+
+    .menu__course{
+        &:nth-child(#{$i}) {
+            animation-duration: $i * 1s;
+        }
+    }
+}

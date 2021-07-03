@@ -1,0 +1,197 @@
+.menu {
+    background-color: whitesmoke;
+    max-width: 100%; 
+    padding: 5%;
+    border-radius: 15% / 4%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    h2 {
+        position: relative;
+        font-family: shrikhand;
+        
+        i {
+            position: absolute;
+            right: 5%;
+        }
+    }
+    
+    section {
+        padding: 1% 0;
+        animation: 1s ease 0s emerge;
+    }
+
+    h3 {
+        padding-bottom: 2.5%;
+        font-size: $small-title-size;
+        font-weight: $medium-font;
+        text-transform: upercase;
+        background-image: $linearGradient;
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        background-size: 15% 10%;
+    }
+
+    &__course {
+        background-color: white;
+        border-radius: 5% / 25%;
+        margin-bottom: 5%;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 5% 75% 12% 8% 20%;
+        grid-template-rows: 0.8em auto 0.5em auto 0.8em;
+        transition: 0.5s ease-in-out;
+        transition-property: grid-template-columns, transform;
+        animation: 3s ease  emerge;
+
+        h4 {
+            margin: 0;
+            font-size: $small-title-size;
+            font-weight: $bold-font;
+            white-space:nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            grid-column: 2 / span 2;
+            grid-row: 2/ span 1; 
+        }
+     
+        p{
+            margin: 0;
+            font-size: $text-font-size;
+            font-weight: $light-font;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            grid-column: 2 / span 1;
+            grid-row: 4 / span 1;
+        }
+     
+        p:nth-of-type(2) {
+            font-weight: $bold-font;
+            grid-column: 3 /span 1;
+            grid-row: 4 / span 1;
+            justify-self: end;
+        }
+        
+        &__validation {
+            color: white;
+            padding: 45% 35% 44% 35%;
+            border-top-right-radius: 25% ;
+            border-bottom-right-radius: 25% ;
+            background-color: $tertiaire;
+            grid-column: 5 / span 1;
+            grid-row: 1 / span 5;
+            justify-self: start;
+            align-self: center;
+            
+        }
+        
+        &:hover {
+            grid-template-columns: 5% 60% 15% 0 20%;
+
+            p:nth-of-type(2) {
+                justify-self: center;
+            }
+
+            .customSpin{
+                animation: fa-spin 0.5s 0.1s linear 1;
+            }
+        }
+    }
+
+    button{
+        @include btn-style;
+        @include centered-block;
+        width: 52%;
+        border-radius: 15% / 50%;
+        margin: 15% auto;
+    }
+    
+    @include mobile-tablette{
+        section{
+            h3{
+                padding-bottom: 1.5%;
+            }
+            .menu__course{
+                grid-template-rows: auto;
+                h4{
+                    align-self: end;
+                }
+                &:hover{
+                    grid-template-columns: 5% 60% 15% 3% 20%;
+                }
+            }
+        }
+    }
+
+    @include desktops{
+        border-radius: 5%;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        padding: 3%;
+
+        section{
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 10% 90%;
+
+            h3{
+                grid-column: 2 / span 1;
+                grid-row: 1 / span 1;
+            }
+
+            .menu__course{
+
+                width: 90%;
+                margin: 0;
+
+                h4{
+                    align-self: end;
+                    font-size: 1.2em;
+                    padding-bottom: 1%;
+                }
+
+                &:nth-child(2) {
+                    grid-column: 1 / span 1;
+                    grid-row: 2 / span 1;
+                }
+
+                &:nth-child(3) {
+                    grid-column: 2 / span 1;
+                    grid-row: 2 / span 1;
+                }
+
+                &:nth-child(4) {
+                    grid-column: 2 / span 1;
+                    grid-row: 3 / span 1;
+                    margin-top: 2%;
+                }
+
+                &:last-child {
+                    grid-column: 3 / span 1;
+                    grid-row: 2 / span 1;
+                    margin-top: 0;
+                }
+
+                p{
+                    font-size: 1em;
+                }
+
+                p:nth-of-type(2){
+                    font-size: 1em;
+                }
+
+                &:hover{
+                    grid-template-columns: 5% 60% 15% 2% 20%;
+                }
+            }
+        }
+
+        button {
+            width: 30%;
+            border-radius: 5% / 50%;
+            margin: 2% auto;
+        }
+    }
+}

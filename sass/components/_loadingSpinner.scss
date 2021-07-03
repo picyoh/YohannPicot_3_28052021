@@ -1,0 +1,44 @@
+// spinner
+
+.loadingSpinner{
+    @include null-size;
+    position: relative;
+    z-index: 1;
+    border-radius: 50%;
+    background: gainsboro;
+
+    
+    &:before{
+        @include absolute-pseudo;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+        z-index: 1;
+        background: white;
+
+    }
+    
+    &:after {
+        @include absolute-pseudo;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 80%;
+        z-index: 1;
+        border: 0 none;
+        animation: loadingHide 2s ease-in-out;
+    }
+
+    @include mobile-only {
+        animation: loadingSpin 2s linear;
+    }
+
+    @include mobile-tablette {
+        animation: midLoadingSpin 2s linear;
+    } 
+
+    @include desktops {
+        animation: desktopLoadingSpin 2s linear;
+    }
+}

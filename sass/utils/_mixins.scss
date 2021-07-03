@@ -1,0 +1,86 @@
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile-only)){
+        @content;
+    }
+}
+
+@mixin mobile-tablette {
+    @media screen and (min-width: map-get($breakpoints, tablette)){
+        @content;
+    }
+}
+
+@mixin desktops {
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}
+
+//mixin
+@mixin loader {
+    width: 33%;
+    height: 16vh;
+    margin: 82% 0 0 33%;
+}
+
+@mixin mid-loader{
+    width: 16%;
+    height: 12vh;
+    margin: 50% 0 0 42%;
+}
+
+@mixin desktop-loader{
+    width: 7.5%;
+    height: 15vh;
+    margin: 15% 0 0 45%;
+}
+
+@mixin null-size{
+    width: 0;
+    height: 0;
+}
+
+@mixin centered-block {
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+@mixin absolute-pseudo {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+@mixin btn-style {
+    height: 3.2em;
+    border: none;
+    border-radius: 10% / 50%;
+    font-size: $text-font-size;
+    font-weight: $medium-font;
+    color: white;
+    background: $linearGradient;
+    box-shadow: 0 5px 12px gainsboro;
+ 
+    &:hover {
+        background: linear-gradient(lighten($color: #FF79DA, $amount: 5%), lighten($color: #9356DC, $amount: 5%));
+        box-shadow: 0 5px 12px silver;
+    }
+}
+
+@mixin top-grid{
+    display: grid;
+    grid-template-columns: 5% 45% 45% 5%;
+    grid-template-rows: 10% 45% 45%;
+}
+
+@mixin tablette-bottom-grid{
+    display: grid;
+    grid-template-columns: 3% 45% 5% 45% 2%;
+    grid-template-rows: 5% 1fr 1fr;
+}
+
+@mixin bottom-grid{
+    display: grid;
+    grid-template-columns: 5% 20% 3% 20% 3% 20% 3% 20% 5%;
+    grid-template-rows: 5% 1fr;
+}

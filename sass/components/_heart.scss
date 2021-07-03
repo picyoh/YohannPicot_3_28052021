@@ -1,0 +1,10 @@
+.fa-heart {
+    &:hover::before{
+        transition-property: font-weight;
+        transition: 0.5s ease-in-out;
+        color: transparent;
+        font-weight: 900;
+        background: $linearGradient;
+        background-clip: text;
+    }
+}

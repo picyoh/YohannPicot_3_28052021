@@ -1,0 +1,22 @@
+// couleurs
+
+$primaire: #9356DC;
+$secondaire: #FF79DA;
+$tertiaire: #99E2D0;
+$linearGradient: linear-gradient(#FF79DA, #9356DC);
+
+// Font
+
+$text-font-size: 0.9em;
+$small-title-size: 1.1em;
+$light-font: 300;
+$medium-font: 500;
+$bold-font: 700;
+
+// breakpoint
+
+$breakpoints: (
+    "mobile-only": 480px,
+    "tablette": 481px,
+    "desktop": 1280px
+);
