@@ -32,7 +32,7 @@
             }
 
             &:hover {
-                background: lighten($color:#FF79DA, $amount: 25%);
+                background: lighten($color: $primaire, $amount: 90%);
             }
 
             i {
