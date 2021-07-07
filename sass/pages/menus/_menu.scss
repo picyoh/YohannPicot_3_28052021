@@ -117,6 +117,11 @@
                 h4{
                     align-self: end;
                 }
+
+                &__validation {
+                    padding: 30% 35%;
+                }
+
                 &:hover{
                     grid-template-columns: 5% 60% 15% 3% 20%;
                 }
