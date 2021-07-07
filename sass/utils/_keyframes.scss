@@ -52,6 +52,24 @@
     }
 }
 
+@keyframes bodyFlex {
+    0%{
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    99%{
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    100%{
+
+    }
+}
+
 @keyframes wrapperVisibility {
     0%{
         @include null-size;

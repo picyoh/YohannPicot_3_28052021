@@ -2,12 +2,10 @@
   0% {
     width: 110px;
     height: 110px;
-    margin: 82% 0 0 33%;
   }
   100% {
     width: 110px;
     height: 110px;
-    margin: 82% 0 0 33%;
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
     border: 0 none;
@@ -18,12 +16,10 @@
   0% {
     width: 110px;
     height: 110px;
-    margin: 82% 0 0 33%;
   }
   100% {
     width: 110px;
     height: 110px;
-    margin: 82% 0 0 33%;
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
     border: 0 none;
@@ -34,12 +30,10 @@
   0% {
     width: 150px;
     height: 150px;
-    margin: 50% 0 0 42%;
   }
   100% {
     width: 150px;
     height: 150px;
-    margin: 50% 0 0 42%;
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
     border: 0 none;
@@ -50,12 +44,10 @@
   0% {
     width: 150px;
     height: 150px;
-    margin: 50% 0 0 42%;
   }
   100% {
     width: 150px;
     height: 150px;
-    margin: 50% 0 0 42%;
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
     border: 0 none;
@@ -66,12 +58,10 @@
   0% {
     width: 160px;
     height: 160px;
-    margin: 15% 0 0 45%;
   }
   100% {
     width: 160px;
     height: 160px;
-    margin: 15% 0 0 45%;
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
     border: 0 none;
@@ -82,12 +72,10 @@
   0% {
     width: 160px;
     height: 160px;
-    margin: 15% 0 0 45%;
   }
   100% {
     width: 160px;
     height: 160px;
-    margin: 15% 0 0 45%;
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
     border: 0 none;
@@ -119,6 +107,48 @@
   }
   100% {
     border: 0 none;
+  }
+}
+
+@-webkit-keyframes bodyFlex {
+  0% {
+    height: 100vh;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+  99% {
+    height: 100vh;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+  100% {
+  }
+}
+
+@keyframes bodyFlex {
+  0% {
+    height: 100vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  99% {
+    height: 100vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  100% {
   }
 }
 
@@ -355,6 +385,11 @@ body {
   max-width: 100%;
   min-height: 100%;
   font-family: 'Roboto', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: bodyFlex 2s linear;
+          animation: bodyFlex 2s linear;
 }
 
 h3 {
