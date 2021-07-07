@@ -1129,6 +1129,9 @@ footer ul li i {
     font-size: 1.2em;
     padding-bottom: 1%;
   }
+  .menu section .menu__course__validation {
+    padding: 40% 35%;
+  }
   .menu section .menu__course:nth-child(2) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
@@ -1168,9 +1171,6 @@ footer ul li i {
   }
   .menu section .menu__course p:nth-of-type(2) {
     font-size: 1em;
-  }
-  .menu section .menu__course__validation {
-    padding: 30% 35%;
   }
   .menu section .menu__course:hover {
     -ms-grid-columns: 5% 60% 15% 2% 20%;
