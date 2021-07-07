@@ -187,6 +187,10 @@
                     font-size: 1em;
                 }
 
+                &__validation {
+                    padding: 40% 35%;
+                }
+
                 &:hover{
                     grid-template-columns: 5% 60% 15% 2% 20%;
                 }
